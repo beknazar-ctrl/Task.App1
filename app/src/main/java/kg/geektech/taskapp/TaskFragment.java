@@ -12,8 +12,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import org.jetbrains.annotations.NotNull;
+
+import kg.geektech.taskapp.ui.home.HomeFragment;
 
 
 public class TaskFragment extends Fragment {
@@ -24,6 +27,8 @@ public class TaskFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_task, container, false);
+
+
     }
 
     @Override
