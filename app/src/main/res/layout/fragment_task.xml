@@ -11,13 +11,16 @@
        android:id="@+id/edit_text"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
+       android:background="@drawable/bg_edit"
        android:hint="Ведите задачку"/>
 
     <Button
+        android:layout_marginTop="10dp"
         android:id="@+id/btn_save"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Save"
-        android:textAllCaps="false"/>
+        android:text="S҉ a҉ v҉ e҉"
+        android:textStyle="bold"
+        style="@style/ButtonStyle"/>
 
 </LinearLayout>

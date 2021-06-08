@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.profile.ProfileFragment">
+    tools:context=".ui.profile.ProfileFragment"
+    android:layout_margin="10dp">
 
    <ImageView
        android:id="@+id/profile_image_fragment"
@@ -16,4 +17,18 @@
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintStart_toStartOf="parent"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+   <EditText
+      android:id="@+id/profile_userName"
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+      android:layout_below="@+id/profile_image_fragment"/>
+
+   <EditText
+      android:id="@+id/profile_email"
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+      android:layout_below="@+id/profile_userName"
+       android:layout_marginTop="10dp"/>
+
+
+</RelativeLayout>

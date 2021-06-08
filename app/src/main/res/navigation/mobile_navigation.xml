@@ -32,4 +32,14 @@
         android:name="kg.geektech.taskapp.ui.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/boardFragment"
+        android:name="kg.geektech.taskapp.ui.onboard.BoardFragment"
+        android:label="fragment_board"
+        tools:layout="@layout/fragment_board" />
+    <fragment
+        android:id="@+id/phoneFragment"
+        android:name="kg.geektech.taskapp.ui.PhoneFragment"
+        android:label="fragment_phone"
+        tools:layout="@layout/fragment_phone" />
 </navigation>
