@@ -67,7 +67,6 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
         if (position % 2 == 1) {
             holder.itemView.setBackgroundColor(R.color.black);
 
-
         }
 
     }
