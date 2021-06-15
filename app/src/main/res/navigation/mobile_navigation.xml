@@ -39,7 +39,12 @@
         tools:layout="@layout/fragment_board" />
     <fragment
         android:id="@+id/phoneFragment"
-        android:name="kg.geektech.taskapp.ui.PhoneFragment"
+        android:name="kg.geektech.taskapp.ui.auth.PhoneFragment"
         android:label="fragment_phone"
         tools:layout="@layout/fragment_phone" />
+    <fragment
+        android:id="@+id/editCodeFragment"
+        android:name="kg.geektech.EditCodeFragment"
+        android:label="fragment_edit_code"
+        tools:layout="@layout/fragment_edit_code" />
 </navigation>

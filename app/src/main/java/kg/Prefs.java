@@ -8,21 +8,23 @@ public class Prefs {
     private SharedPreferences preferences;
 
     public Prefs(Context context) {
-        preferences=context.getSharedPreferences("Settings", Context.MODE_PRIVATE);
+        preferences = context.getSharedPreferences("Settings", Context.MODE_PRIVATE);
 
     }
 
-    public void saveBoardState(){
-        preferences.edit().putBoolean("isShown",true).apply();
-    }
-    public boolean isShown(){
-        return preferences.getBoolean("isShown",false);
+    public void saveBoardState() {
+        preferences.edit().putBoolean("isShown", true).apply();
     }
 
-    public void clearPref(){
+    public boolean isShown() {
+        return preferences.getBoolean("isShown", false);
+    }
+
+    public void clearPref() {
         preferences.edit().clear().commit();
     }
-    public void clearEditText(){
+
+    public void clearEditText() {
         preferences.edit().remove(getString("autoSave"));
     }
 
@@ -31,7 +33,7 @@ public class Prefs {
         preferences.edit().putString(autoSave, s).apply();
     }
 
-    public String getString(String autoSave){
+    public String getString(String autoSave) {
         return preferences.getString(autoSave, "");
     }
 

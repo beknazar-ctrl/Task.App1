@@ -1,20 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.PhoneFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.auth.PhoneFragment"
+    android:padding="16dp">
 
     <EditText
+        android:inputType="phone"
         android:id="@+id/editPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ведите номер телефона"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
 
     <Button
+        app:layout_constraintTop_toBottomOf="@id/editPhone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Продолжить"
+        android:layout_marginTop="24dp"/>
+
+    <EditText
+        android:inputType="number"
+        android:visibility="gone"
+        android:id="@+id/editCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ведите код"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <Button
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/editCode"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/btnContinueCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Продолжить c кодом"
+        android:layout_marginTop="24dp"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+       android:layout_marginTop="300dp"
+        android:indeterminateDrawable="@drawable/spinner_png"
+        android:indeterminateOnly="true"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editCode"
+        />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"/>
 
 
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

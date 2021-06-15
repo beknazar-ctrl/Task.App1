@@ -36,6 +36,7 @@ public class ProfileFragment extends Fragment {
                 @Override
                 public void onActivityResult(Uri uri) {
                     imageView.setImageURI(uri);
+
                 }
             });
 
